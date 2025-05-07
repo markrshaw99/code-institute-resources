@@ -1,0 +1,107 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #002b36;
+    color: white;
+}
+
+header img.logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+/* Main Content */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+main h2 {
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+
+main section {
+    margin-top: 30px;
+    background: #fff;
+    padding: 20px;
+    border-left: 5px solid #0077cc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+main ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+main ul li {
+    margin: 8px 0;
+}
+
+/* Ensure links don't change color after being clicked */
+a:link, a:visited {
+    color: inherit; /* Keeps the same color as unvisited links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: inherit; /* Optional: Keeps the same color when active */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
