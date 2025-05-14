@@ -1,14 +1,15 @@
-
 html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Roboto', sans-serif;
-  background: #f9f9f9; /* Alternatively, use #f7f7f7 if preferred */
+  font-family: "Roboto", sans-serif;
+  background: #f9f9f9;
   color: #333;
   line-height: 1.6;
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 700;
 }
 h1 {
@@ -28,10 +29,12 @@ h3 {
   color: #34495e;
   margin-top: 20px;
 }
-p, li {
+p,
+li {
   font-size: 1rem;
   margin: 15px 0;
 }
+
 /* LINKS */
 a:link,
 a:visited {
@@ -42,6 +45,7 @@ a:hover,
 a:active {
   text-decoration: underline;
 }
+
 /* CONTAINER & LAYOUT */
 .container {
   max-width: 900px;
@@ -83,28 +87,24 @@ nav#contents a {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;         /* Vertically center the logo */
+  justify-content: space-between;
   padding: 20px 20px;
   background-color: #002b36;
   color: white;
-  margin-top: 60px;            /* offset for fixed nav if applicable */
-  position: relative;        /* establish parent for absolute positioning */
+  margin-top: 60px;
+  position: relative;
+  box-shadow: 0px 5px 5px #3a3a3a;
 }
-
 header img.logo {
   max-width: 150px;
   height: auto;
-  /* No need for extra margins here if using absolute centering */
 }
-
 header h1 {
-  text-align: center; 
+  text-align: center;
 }
-
 .whitespace {
-  width: 150px
+  width: 150px;
 }
-
 header h3 {
   font-size: 1.2rem;
   font-weight: normal;
@@ -150,7 +150,8 @@ pre {
   margin-top: 0;
 }
 code {
-  font-family: 'Fira Code', 'Source Code Pro', Consolas, 'Courier New', monospace;
+  font-family: "Fira Code", "Source Code Pro", Consolas, "Courier New",
+    monospace;
   font-size: 0.95rem;
 }
 .copy-btn {
@@ -176,7 +177,8 @@ table {
   border-collapse: collapse;
   margin-top: 20px;
 }
-th, td {
+th,
+td {
   padding: 10px;
   text-align: left;
   border: 1px solid #ccc;
@@ -238,24 +240,4 @@ footer {
   height: 100%;
   border: 0;
   margin-top: -200px;
-}
-
-/* PRINT-SPECIFIC STYLES */
-@media print {
-  body {
-    background: #fff;
-  }
-  .container {
-    box-shadow: none;
-    margin: 0;
-    padding: 0.5cm;
-  }
-  nav#contents,
-  #backToTop {
-    display: none;
-  }
-  header, main, footer,
-  h1, h2, h3, p, li, pre {
-    -webkit-print-color-adjust: exact;
-  }
 }
