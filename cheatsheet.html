@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML & CSS Cheat Sheet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts Link -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Table of Contents -->
+  <nav id="contents">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#day1">Day 1</a></li>
+      <li><a href="#day2">Day 2</a></li>
+      <li><a href="#day3">Day 3</a></li>
+      <li><a href="#day4">Day 4</a></li>
+      <li><a href="#day5">Day 5</a></li>
+      <li><a href="#day6">Day 6</a></li>
+      <li><a href="#day7">Day 7</a></li>
+      <li><a href="#day8">Day 8</a></li>
+      <li><a href="#day9">Day 9</a></li>
+      <li><a href="#day10">Day 10</a></li>
+      <li><a href="#day11">Day 11</a></li>
+      <li><a href="#bonus">Bonus</a></li>
+      <li><a href="#summary">Summary</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>HTML & CSS Cheat Sheet</h1>
+    
+    <!-- Day 1: HTML & Semantic HTML -->
+    <section id="day1">
+      <h2>Day 1: Introduction to HTML + Semantic HTML</h2>
+      <p>HTML (HyperText Markup Language) is the backbone of web content. It defines the structure of your webpage. Semantic HTML uses meaningful tags to help both browsers and assistive devices understand your content better. For example, using <code>&lt;header&gt;</code> for headers or <code>&lt;main&gt;</code> to denote the primary content improves accessibility and SEO.</p>
+      
+      <h3>HTML Document Structure</h3>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Main Heading&lt;/h1&gt;
+    &lt;p&gt;A paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+      </div>
+
+      <h3>Semantic Elements</h3>
+      <p>Using semantic tags like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code>, and <code>&lt;footer&gt;</code> adds clarity and meaning to your markup.</p>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+&lt;header&gt;Website Header&lt;/header&gt;
+&lt;nav&gt;Main Navigation&lt;/nav&gt;
+&lt;main&gt;Main Content&lt;/main&gt;
+&lt;article&gt;Blog Post&lt;/article&gt;
+&lt;section&gt;Logical Section&lt;/section&gt;
+&lt;aside&gt;Sidebar Content&lt;/aside&gt;
+&lt;footer&gt;Page Footer&lt;/footer&gt;
+        </code></pre>
+      </div>
+      <p><strong>Analogy:</strong> Think of semantic tags like well-labelled folders in a filing cabinet – everything is in its right place for screen readers, search engines, and developers.</p>
+    </section>
+    
+    <!-- Day 2: Lists and Links -->
+    <section id="day2">
+      <h2>Day 2: Lists and Links</h2>
+      <p>Lists are useful for grouping related items together, such as navigation menus or features. Links (<code>&lt;a&gt;</code>) connect your page to additional content or external resources. The <code>rel="noopener"</code> attribute increases security when opening links in new tabs.</p>
+      
+      <h3>Lists</h3>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+&lt;ul&gt;
+  &lt;li&gt;Unordered Item 1&lt;/li&gt;
+  &lt;li&gt;Unordered Item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Ordered Item 1&lt;/li&gt;
+  &lt;li&gt;Ordered Item 2&lt;/li&gt;
+&lt;/ol&gt;
+        </code></pre>
+      </div>
+
+      <h3>Links</h3>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+&lt;a href="https://example.com" target="_blank" rel="noopener"&gt;Visit Site&lt;/a&gt;
+        </code></pre>
+      </div>
+    </section>
+    
+    <!-- Day 3: Images and Attributes -->
+    <section id="day3">
+      <h2>Day 3: Images and Attributes</h2>
+      <p>Images add visual flair to your website. Always include the <code>alt</code> attribute for accessibility and use <code>loading="lazy"</code> to defer loading until the image is visible in the viewport.</p>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+&lt;img src="cat.jpg" alt="A sleeping cat" width="300" loading="lazy"&gt;
+        </code></pre>
+      </div>
+    </section>
+    
+    <!-- Day 4: CSS Introduction + Selectors -->
+    <section id="day4">
+      <h2>Day 4: CSS Introduction + Selectors</h2>
+      <p>CSS (Cascading Style Sheets) is used to style your HTML content. It can be added inline, internally, or externally. Selectors target specific elements of your webpage so you can control their appearance.</p>
+      
+      <h3>CSS Selectors</h3>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+/* Type Selector */
+p { 
+  color: blue; 
+}
+
+/* Class Selector */
+.button { 
+  background: black; 
+}
+
+/* ID Selector */
+#header { 
+  text-align: center; 
+}
+
+/* Descendant Selector */
+nav a { 
+  text-decoration: none; 
+}
+
+/* Pseudo-class */
+a:hover { 
+  color: red; 
+}
+        </code></pre>
+      </div>
+    </section>
+    
+    <!-- Day 5: Colours, Units, and Typography -->
+    <section id="day5">
+      <h2>Day 5: Colours, Units, and Typography</h2>
+      <p>Colours, measurement units, and typography all contribute to the overall design of your site.</p>
+      
+      <h3>Colours</h3>
+      <ul>
+        <li><strong>Named:</strong> e.g., red, blue</li>
+        <li><strong>Hex:</strong> e.g., <code>#ff6600</code></li>
+        <li><strong>RGB:</strong> e.g., <code>rgb(255, 0, 0)</code></li>
+        <li><strong>HSL:</strong> e.g., <code>hsl(0, 100%, 50%)</code></li>
+      </ul>
+      
+      <h3>Units</h3>
+      <ul>
+        <li><strong>Absolute:</strong> e.g., px, cm</li>
+        <li><strong>Relative:</strong> e.g., em, rem, %, vw, vh</li>
+      </ul>
+      
+      <h3>Typography</h3>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+        </code></pre>
+      </div>
+      <p>To include fonts, you might import one from Google Fonts:</p>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+&lt;link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"&gt;
+        </code></pre>
+      </div>
+    </section>
+    
+    <!-- Day 6: Box Model -->
+    <section id="day6">
+      <h2>Day 6: Box Model</h2>
+      <p>The box model is a key concept in CSS. Every element is a box composed of content, padding, border, and margin. Mastering the box model is crucial for precise layouts.</p>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+div {
+  margin: 10px;
+  border: 5px solid #000;
+  padding: 20px;
+  width: 200px;
+  box-sizing: border-box;
+}
+        </code></pre>
+      </div>
+      <p><strong>Analogy:</strong> Think of it like a package—the content is your item, the padding is the protective bubble wrap, the border is the box, and the margin is the space outside the package.</p>
+    </section>
+    
+    <!-- Day 7: Layout – Display and Positioning -->
+    <section id="day7">
+      <h2>Day 7: Layout – Display and Positioning</h2>
+      <p>Layout properties like <code>display</code> and <code>position</code> determine how elements are arranged on your page. They give you control over alignment, spacing, and stacking.</p>
+      <ul>
+        <li><strong>Display:</strong> e.g., <code>block</code>, <code>inline</code>, <code>inline-block</code>, <code>none</code></li>
+        <li><strong>Position:</strong> e.g., <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code></li>
+        <li><strong>Float & Clear:</strong> Used for wrapping text and creating multi-column layouts.</li>
+        <li><strong>Visibility & Overflow:</strong> Control what happens when content exceeds its container.</li>
+      </ul>
+    </section>
+    
+    <!-- Day 8: Forms + Basic Validation -->
+    <section id="day8">
+      <h2>Day 8: Forms + Basic Validation</h2>
+      <p>HTML forms capture user input. HTML5 validation attributes like <code>required</code>, <code>minlength</code>, <code>maxlength</code>, and <code>pattern</code> help perform basic checks without JavaScript.</p>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+&lt;form action="/submit" method="post"&gt;
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input id="email" type="email" name="email" required&gt;
+  &lt;input type="submit" value="Send"&gt;
+&lt;/form&gt;
+        </code></pre>
+      </div>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+&lt;input type="text" name="username" required 
+       minlength="3" maxlength="15" pattern="[A-Za-z0-9]+"&gt;
+        </code></pre>
+      </div>
+    </section>
+    
+    <!-- Day 9: Flexbox -->
+    <section id="day9">
+      <h2>Day 9: Flexbox</h2>
+      <p>Flexbox simplifies creating flexible, responsive layouts. It controls spacing, alignment, and distribution of items in a container.</p>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+        </code></pre>
+      </div>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+.item {
+  flex: 1 1 200px; /* grow, shrink, basis */
+}
+        </code></pre>
+      </div>
+    </section>
+    
+    <!-- Day 10: Media Queries + Responsive Design -->
+    <section id="day10">
+      <h2>Day 10: Media Queries + Responsive Design</h2>
+      <p>Responsive design ensures your site performs wonderfully on every device. Begin with the viewport meta tag and then refine your layout with media queries.</p>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        </code></pre>
+      </div>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+}
+        </code></pre>
+      </div>
+    </section>
+    
+    <!-- Day 11: Tables + Multimedia -->
+    <section id="day11">
+      <h2>Day 11: Tables + Multimedia</h2>
+      <p>Tables help display structured data, while multimedia elements like video and audio enhance interactive content.</p>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Alice&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+        </code></pre>
+      </div>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+&lt;video controls width="300"&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="song.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+        </code></pre>
+      </div>
+    </section>
+    
+    <!-- Bonus: CSS Grid, Transitions & Accessibility -->
+    <section id="bonus">
+      <h2>Bonus: CSS Grid, Transitions & Accessibility</h2>
+      <p>This section delves into advanced features like CSS Grid for two-dimensional layouts, smooth property transitions and animations, and accessibility best practices.</p>
+      
+      <h3>CSS Grid</h3>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+        </code></pre>
+      </div>
+      
+      <h3>Transitions & Animations</h3>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+button {
+  background-color: blue;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: green;
+}
+        </code></pre>
+      </div>
+      
+      <h3>Accessibility Basics</h3>
+      <div class="code-container">
+        <button class="copy-btn">Copy</button>
+        <pre><code>
+&lt;nav aria-label="Main menu"&gt;
+  ... navigation elements ...
+&lt;/nav&gt;
+        </code></pre>
+      </div>
+    </section>
+    
+    <!-- Summary Table -->
+    <section id="summary">
+      <h2>Summary Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Topic</th>
+            <th>Key Tags/Properties</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML Basics</td>
+            <td>&lt;html&gt;, &lt;head&gt;, &lt;body&gt;, &lt;h1&gt;, &lt;p&gt;</td>
+          </tr>
+          <tr>
+            <td>Semantic HTML</td>
+            <td>&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;section&gt;, &lt;aside&gt;, &lt;footer&gt;</td>
+          </tr>
+          <tr>
+            <td>Lists & Links</td>
+            <td>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;, &lt;a&gt;</td>
+          </tr>
+          <tr>
+            <td>Images & Attributes</td>
+            <td>&lt;img src&gt;, alt, loading</td>
+          </tr>
+          <tr>
+            <td>CSS Basics</td>
+            <td>Selectors, color, font-size, margin, background</td>
+          </tr>
+          <tr>
+            <td>Typography</td>
+            <td>font-family, @import, Google Fonts</td>
+          </tr>
+          <tr>
+            <td>Box Model</td>
+            <td>margin, padding, border, box-sizing</td>
+          </tr>
+          <tr>
+            <td>Layout & Positioning</td>
+            <td>display, position, float, clear</td>
+          </tr>
+          <tr>
+            <td>Forms & Validation</td>
+            <td>&lt;form&gt;, input[type], required, pattern</td>
+          </tr>
+          <tr>
+            <td>Flexbox</td>
+            <td>display: flex, justify-content, align-items, flex-direction</td>
+          </tr>
+          <tr>
+            <td>Media Queries</td>
+            <td>@media, viewport, responsive design</td>
+          </tr>
+          <tr>
+            <td>Tables & Multimedia</td>
+            <td>&lt;table&gt;, &lt;thead&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;video&gt;, &lt;audio&gt;</td>
+          </tr>
+          <tr>
+            <td>CSS Grid (Bonus)</td>
+            <td>display: grid, grid-template-columns, gap</td>
+          </tr>
+          <tr>
+            <td>Transitions (Bonus)</td>
+            <td>transition, animation, :hover</td>
+          </tr>
+          <tr>
+            <td>Accessibility (Bonus)</td>
+            <td>aria-*, semantic tags, alt text, keyboard navigation</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+  
+  <!-- Back to Top Button -->
+  <button id="backToTop" onclick="scrollToTop()">↑ Top</button>
+  
+  <!-- Link to External JavaScript -->
+  <script src="cheatsheet.js"></script>
+</body>
+</html>
